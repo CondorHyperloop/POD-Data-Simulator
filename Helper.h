@@ -1,5 +1,7 @@
 #pragma once
+#include <iostream>
 #include <stdlib.h>
+#include <fstream>
 #include <ctime>
 
 class Helper
@@ -13,4 +15,5 @@ public:
     float generateTemperature();
     inline float getUpperBoundary() const;
     inline float getBelowBoundary() const;
+    void writeTemperature();
 };

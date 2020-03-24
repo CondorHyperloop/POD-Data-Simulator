@@ -16,3 +16,12 @@ float Helper::generateTemperature() {
     srand((int)time(0));
     return rand() % ((int)getUpperBoundary()) + ((int)getBelowBoundary()) ;
 }
+
+void Helper::writeTemperature() {
+    std::ofstream file ("simulation.txt");
+    if (file.is_open())
+    {
+        file << generateTemperature() << std::endl;
+        file.close();
+    }
+}
